@@ -1,0 +1,55 @@
+.titulo-ofertas-contenedor {
+  color: #12B0AF;
+  margin: 1em 0;
+  padding-left: .8em;
+  border-left: 3px solid #12B0AF;
+}
+
+.carta-contenedor {
+  width: 300px;
+  height: 400px;
+  margin: 3em 1.5em;
+  background-color: rgb(255, 255, 255);
+  border-radius: .5em;
+
+  transition: box-shadow 700ms, transform 700ms;
+}
+
+.carta-contenedor:hover {
+  box-shadow: 0 0 25px 1px #12B0AF;
+  transform: scale(1.1, 1.1);
+}
+
+.imagen-carta {
+  max-width: 200px;
+  max-height: 230px;
+  margin-top: .5em;
+}
+
+.titulo-comida {
+  margin: .2em 0;
+}
+
+.estrella {
+  /* max-width:; */
+  width: 30px;
+  max-height: 30px;
+}
+
+.precio-carta {
+  margin: .2em 0;
+  font-size: 25px;
+}
+
+.carta-bottom {
+  background-color: #12B0AF;
+  color: white;
+  margin-top: .3em;
+  padding: .5em;
+  border-radius: 0 0 .5em .5em;
+  text-align: center;
+}
+
+.carta-bottom:hover {
+  cursor: pointer;
+}

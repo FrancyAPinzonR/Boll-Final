@@ -1,0 +1,17 @@
+img {
+  max-width: 100%;
+}
+
+.imglogo {
+  width: 60%;
+}
+
+
+#imglogonav {
+  width: 40%;
+  margin-bottom: 0.5em;
+}
+
+.divsito {
+  text-align: center;
+}

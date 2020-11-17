@@ -1,0 +1,25 @@
+.sombra {
+  -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 55px 0px rgba(18, 176, 175, 1);
+  height: 280px;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 50px;
+
+}
+
+.img-card {
+  height: 200px;
+}
+
+.sombra:hover {
+  -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 55px 0px rgba(242, 89, 38, 1);
+}
+
+.titulo {
+  background-color: rgba(22, 21, 21, 0.555);
+  color: white;
+}

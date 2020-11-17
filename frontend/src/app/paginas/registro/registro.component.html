@@ -1,0 +1,79 @@
+<div class="conte-form">
+
+    <!-- Aquí inicia el formulario Contacto -->
+    <form action="./login.html">
+        <div class="general d-flex flex-column"><img class="img-registro" src="../../../assets/imgs/imgRegistro/king.jpg" alt="logo">
+            <div class="registro col-sm-12">
+                <h2>Te damos la bienvenida a BOLL, un lugar ideal para tú mascota</h2>
+
+                <h5>!Aprovecha los grandes descuentos que tenemos!.</h5>
+
+            </div>
+
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+
+                    <input [(ngModel)]="registrarUsuario.nombre" name ="nombre" type="text" class="campos-texto" id="nombre" title="Escriba su nombre completo"
+                        placeholder="Nombre Completo" minlength="10" maxlength="50" required>
+                </div>
+            </div>
+
+
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+                    <input [(ngModel)]="registrarUsuario.correo" name="correo" type="email" class="campos-texto" title="Escriba su correo electronico" id="email"
+                        placeholder="anaphie@example.com" minlength="10" maxlength="30" required>
+
+                </div>
+            </div>
+
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+                    <select [(ngModel)]="registrarUsuario.tipoDocumento" [ngModelOptions]="{standalone: true}" class="campos-texto"  id="documento" name="documento" title="Tipo de Documento" required>
+                        <option hidden selected value="">Tipo de Documento</option>
+                        <option value="cedulaCiudadana">Cedula de Ciudadania</option>
+                        <option value="cedulaExtranjera">Cedula Extranjera </option>
+                        <option value="pasaporte">Pasaporte </option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+                    <input [(ngModel)]="registrarUsuario.numeroIdentificacion" name="numeroIdentificacion" type="text" class="campos-texto" id="numeroIdentificacion" title="Escriba su numero de Identificacion"
+                        placeholder="Numero de Identificacion" minlength="7" maxlength="10" pattern="[0-9]{7,10}"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+                    <input [(ngModel)]="registrarUsuario.telefono" name="telefono" type="text" class="campos-texto" id="telefono" title="Escriba su numero de telefono"
+                        placeholder="Teléfono" minlength="7" maxlength="10" pattern="[0-9]{7,10}" required>
+                </div>
+            </div>
+
+            <div class="form-row col-md-8">
+                <div class="campos col-sm-12">
+
+                    <input [(ngModel)]="registrarUsuario.password" name="password" type="password" class="campos-texto" id="contraseña"
+                        title="Escriba su contraseña con un minino de 5 y maximo de 10 caracteres"
+                        placeholder="Contraseña" required>
+                </div>
+            </div>
+
+            <div class="boton">
+                <input (click)="registrar()" class="bton" type="submit" value="Enviar">
+                <!-- <a href="./login.html">
+                </a> -->
+            </div>
+
+        </div>
+    </form>
+    <!-- Aqui finaliza el formulario-->
+
+</div>
