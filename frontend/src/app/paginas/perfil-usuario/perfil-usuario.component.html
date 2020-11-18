@@ -1,3 +1,156 @@
-<p>perfil-usuario works!</p>
-<input [(ngModel)]="registroImagenPerfil.sticker" name="sticker" type="file">
-<button (click)="subirImagen()">Subir Imagen</button>
+<section class=" py-5 header">
+    <div class="container py-4">
+        <div class="row py-5 px-4">
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 fondo">
+                    <div class="media align-items-end profile-header">
+                        <div class="profile mr-3">
+                            <img src="https://cdn.pixabay.com/photo/2018/07/08/21/22/labrador-3524841_1280.jpg" alt="..." width="300" class="rounded mb-2 img-thumbnail"><a href="#"
+                            class="btn btn-dark btn-sm btn-block">Editar Perfil</a></div>
+                            <input [(ngModel)]="registroImagenPerfil.sticker" name="sticker" type="file">
+                            <button (click)="subirImagen()">Subir Imagen</button>
+                        <div class="media-body mb-5 text-white">
+                            <h4 class="mt-0 mb-0">Violeta</h4>
+                            <p class="small mb-4"> <i class="fa fa-map-marker mr-2"></i>Bogota D.C.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light p-4 d-flex justify-content-end text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <h5 class="font-weight-bold mb-0 d-block">10</h5><small class="text-muted"> <i
+                                    class="fa fa-picture-o mr-1"></i>Fotos</small>
+                        </li>
+                        <li class="list-inline-item">
+                            <h5 class="font-weight-bold mb-0 d-block">84</h5><small class="text-muted"> <i
+                                    class="fa fa-user-circle-o mr-1"></i>Seguidores</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-md-3 pl-4">
+                        <!-- Tabs nav -->
+                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill"
+                                href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                <i class="fa fa-user-circle-o mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Información
+                                    Personal</span></a>
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill"
+                                href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                aria-selected="false">
+                                <i class="fa fa-calendar-minus-o mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Historia Clinica</span></a>
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-messages-tab" data-toggle="pill"
+                                href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                aria-selected="false">
+                                <i class="fa fa-star mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Amigo Humano</span></a>
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-settings-tab" data-toggle="pill"
+                                href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                aria-selected="false">
+                                <i class="fa fa-check mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Hobbies</span></a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-9 pr-4">
+
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home"
+                                role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <h4 class="font-italic mb-4">Información Personal</h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                    enim
+                                    ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum
+                                    dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt
+                                    in
+                                    culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <h4 class="font-italic mb-4">Historia Clinica</h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                    enim
+                                    ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum
+                                    dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt
+                                    in
+                                    culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">
+                                <h4 class="font-italic mb-4">Amigo Humano</h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                    enim
+                                    ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum
+                                    dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt
+                                    in
+                                    culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-settings" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <h4 class="font-italic mb-4">Hobbies</h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                    enim
+                                    ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum
+                                    dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                    sunt
+                                    in
+                                    culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
