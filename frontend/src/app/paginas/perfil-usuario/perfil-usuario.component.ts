@@ -22,7 +22,7 @@ export class PerfilUsuarioComponent implements OnInit {
   subirImagen() {
     this.imagenPerfil.subirImagen(this.registroImagenPerfil).subscribe(
       (res) => {
-        console.log(res);
+        console.log('resp', res)
       },
       (err) => {
         console.log(err);
