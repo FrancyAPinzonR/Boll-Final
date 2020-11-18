@@ -11,16 +11,19 @@ export class PerfilUsuarioComponent implements OnInit {
   constructor(
     private imagenPerfil: ImagenperfilService,
     private router: Router
-  ) {}
+  ) { }
+  
+  ngOnInit(): void { }
+  
+  imagen = null
 
-  registroImagenPerfil = {
-    sticker: '',
-  };
-
-  ngOnInit(): void {}
+  capturarImagen(event) {
+    this.imagen = event.target.files[0];
+    console.log(event.target.files[0]);
+  }
 
   subirImagen() {
-    this.imagenPerfil.subirImagen(this.registroImagenPerfil).subscribe(
+    this.imagenPerfil.subirImagenPerfil(this.imagen).subscribe(
       (res) => {
         console.log('resp', res)
       },

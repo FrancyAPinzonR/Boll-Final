@@ -11,8 +11,10 @@ export class ImagenperfilService {
   private mostrarImagen = 'http://localhost:3000/api/imagenperfil'; //establecer metodo get en el back
   private cargarImagen = 'http://localhost:3000/api/imagenperfil/cargarImagen';
 
-  subirImagen(imagenUsuario) {
-    return this.http.post<any>(this.cargarImagen, imagenUsuario)
+  subirImagenPerfil(imagenUsuario: File) {
+    const fd = new FormData();
+    fd.append('sticker', imagenUsuario);
+    return this.http.post<any>(this.cargarImagen, fd);
   }
 
 }
