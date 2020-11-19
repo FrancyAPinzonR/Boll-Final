@@ -8,8 +8,9 @@ export class ImagenperfilService {
 
   constructor(private http: HttpClient) { }
  
-  private mostrarImagen = 'http://localhost:3000/api/imagenperfil'; //establecer metodo get en el back
+  private mostrarImagen = 'http://localhost:3000/api/imagenperfil/mostrarimagen'; //establecer metodo get en el back
   private cargarImagen = 'http://localhost:3000/api/imagenperfil/cargarImagen';
+  private eliminarImagen = 'http://localhost:3000/api/imagenperfil/';
 
   obtenerImagenPerfil() {
     return this.http.get<any>(this.mostrarImagen);
@@ -23,7 +24,7 @@ export class ImagenperfilService {
 
   eliminarImagenPerfil(imagen) {
     const _id = imagen._id;
-    const url = `${this.mostrarImagen}/${_id}`;
+    const url = `${this.eliminarImagen}/${_id}`;
     return this.http.delete<any>(url); 
   }
 

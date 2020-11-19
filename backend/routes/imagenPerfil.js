@@ -12,13 +12,15 @@ const auth = require("../middleware/auth");
 const cargarImagenPerfil = require("../middleware/file");
 // Ruta
 // Obtener Imagen de Perfil
-router.get("/", auth, async (req, res) => {
+router.get("/mostrarimagen", auth, async (req, res) => { //
     // Buscamos el usuario
     const usuario = await RegistroUsuario.findById(req.usuario._id);
     // Si no existe el usuario
     if (!usuario) return res.status(400).send("El usuario no existe");
     // Si el usuario existe
-    const imagPerfil = await ImagenPerfil.find();
+    const imagPerfil = await ImagenPerfil.find({
+        idUsuario: req.usuario._id,
+    });
     res.send(imagPerfil);
 });
 // Cargar Imagen en Base de Dartos

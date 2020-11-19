@@ -20,7 +20,6 @@ export class PerfilUsuarioComponent implements OnInit {
       (res) => {
         this.fotoPerfil = res;
         console.log(this.fotoPerfil);
-        console.log(this.fotoPerfil.length);
       },
       (err) => {
         console.log(err);
