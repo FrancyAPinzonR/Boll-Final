@@ -23,6 +23,10 @@
   background: #fff;
 }
 
+.imagenPerfilOpciones{
+  display: block;
+  margin-top: 2.5em;
+}
 
 @media (min-width: 992px) {
   .nav-pills-custom .nav-link::before {

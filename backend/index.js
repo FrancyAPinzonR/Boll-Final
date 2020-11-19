@@ -6,13 +6,15 @@ const cors = require("cors");
 const usuario = require("./routes/registroUsuario");
 const auth = require("./routes/auth");
 const imagenPerfil = require("./routes/imagenPerfil");
+
 // App
 const app = express();
 app.use(cors())
 app.use(express.json());
+app.use('/public', express.static('public'));
 app.use("/api/usuario/", usuario);
 app.use("/api/auth/", auth);
-app.use("/api/imagenperfil", imagenPerfil);
+app.use("/api/imagenperfil/", imagenPerfil);
 // Puerto para ejecutar servidor
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Ejecutando en el puerto " + port));

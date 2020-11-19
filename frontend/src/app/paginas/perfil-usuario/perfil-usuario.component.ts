@@ -11,11 +11,24 @@ export class PerfilUsuarioComponent implements OnInit {
   constructor(
     private imagenPerfil: ImagenperfilService,
     private router: Router
-  ) { }
-  
-  ngOnInit(): void { }
-  
-  imagen = null
+  ) {}
+
+  fotoPerfil = [];
+
+  ngOnInit(): void {
+    this.imagenPerfil.obtenerImagenPerfil().subscribe(
+      (res) => {
+        this.fotoPerfil = res;
+        console.log(this.fotoPerfil);
+        console.log(this.fotoPerfil.length);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+  imagen = null;
 
   capturarImagen(event) {
     this.imagen = event.target.files[0];
@@ -25,7 +38,24 @@ export class PerfilUsuarioComponent implements OnInit {
   subirImagen() {
     this.imagenPerfil.subirImagenPerfil(this.imagen).subscribe(
       (res) => {
-        console.log('resp', res)
+        console.log('resp', res);
+        window.location.reload();
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+  borrarImagen(foto) {
+    console.log(foto)
+    console.log(this.fotoPerfil.indexOf(foto))
+    this.imagenPerfil.eliminarImagenPerfil(foto).subscribe(
+      (res) => {
+        const index = this.fotoPerfil.indexOf(foto);
+        if (index > -1) {
+          this.fotoPerfil.splice(index, 1);
+        }
       },
       (err) => {
         console.log(err);

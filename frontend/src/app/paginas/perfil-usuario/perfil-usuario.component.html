@@ -4,19 +4,28 @@
             <div class="bg-white shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 fondo">
                     <div class="media align-items-end profile-header">
-                        <div class="profile mr-3">
-                            <img src="https://cdn.pixabay.com/photo/2018/07/08/21/22/labrador-3524841_1280.jpg" alt="..." width="300" class="rounded mb-2 img-thumbnail"><a href="#"
-                            class="btn btn-dark btn-sm btn-block">Editar Perfil</a></div>
-                            <input [(ngModel)]="registroImagenPerfil.sticker" name="sticker" (change)="capturarImagen($event)" type="file">
-                            <button (click)="subirImagen()">Subir Imagen</button>
+                        <div *ngFor="let foto of fotoPerfil" class="profile mr-3">
+                            <img [src]="fotoPerfil[0].sticker" alt="Imagen del Perfil" width="300"
+                                class="imagenPerfil rounded mb-2 img-thumbnail">
+                            <a href="#" class="btn btn-dark btn-sm btn-block">Editar Perfil</a>
+
+
+                        </div>
                         <div class="media-body mb-5 text-white">
                             <h4 class="mt-0 mb-0">Violeta</h4>
                             <p class="small mb-4"> <i class="fa fa-map-marker mr-2"></i>Bogota D.C.</p>
                         </div>
+
                     </div>
+
                 </div>
 
-                <div class="bg-light p-4 d-flex justify-content-end text-center">
+                <div class="bg-light p-4 d-flex justify-content-between text-center">
+                    <div class="imagenPerfilOpciones">
+                        <input (change)="capturarImagen($event)" type="file" id="imgInput">
+                        <button class="btn btn-success m-1" (click)="subirImagen()">Subir Imagen</button>
+                        <button class="btn btn-danger m-1" (click)="borrarImagen(fotoPerfil[0])">Eliminiar Imagen</button>
+                    </div>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
                             <h5 class="font-weight-bold mb-0 d-block">10</h5><small class="text-muted"> <i
@@ -28,6 +37,7 @@
                         </li>
                     </ul>
                 </div>
+
 
                 <div class="row pb-4">
                     <div class="col-md-3 pl-4">
