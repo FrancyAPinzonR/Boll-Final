@@ -4,7 +4,7 @@
             <div class="bg-white shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 fondo">
                     <div class="media align-items-end profile-header">
-                        <div class="profile mr-3">
+                        <div *ngIf = 'fotoPerfil'  class="profile mr-3">
                             <img [src]="fotoPerfil[fotoPerfil.length - 1].sticker" width="300"  class="rounded mb-2 img-thumbnail">
                             <a href="#" class="btn btn-dark btn-sm btn-block">Editar Perfil</a>
 

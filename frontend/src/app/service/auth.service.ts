@@ -12,6 +12,8 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  loginEstado = false;
+
   registroUsuario(usuario) {
     return this.http.post<any>(this.registroUrl, usuario);
   }
@@ -21,6 +23,13 @@ export class AuthService {
   }
 
   loginOn() {
+    // console.log("Invocación del método loginOn");
+    //console.log("Token en localStorage", localStorage.getItem('token'));
+    // console.log("Respuesta del token",  !!localStorage.getItem('token'));
+    // console.log(typeof localStorage.getItem('token'));
+    // return typeof (localStorage.getItem('token') === 'string') ? false : true;
+    // this.loginEstado = true;
+    // return !!this.loginEstado
     return !!localStorage.getItem('token');
   }
 

@@ -13,7 +13,7 @@ export class PerfilUsuarioComponent implements OnInit {
     private router: Router
   ) {}
 
-  fotoPerfil = [];
+  fotoPerfil = [""];
 
   ngOnInit(): void {
     this.imagenPerfil.obtenerImagenPerfil().subscribe(
@@ -35,7 +35,7 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   subirImagen() {
-    this.fotoPerfil.forEach(foto => console.log(foto));
+    // this.fotoPerfil.forEach(foto => console.log(foto));
     this.imagenPerfil.subirImagenPerfil(this.imagen).subscribe(
       (res) => {
         console.log('resp', res);
