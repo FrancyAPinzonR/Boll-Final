@@ -4,9 +4,8 @@
             <div class="bg-white shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 fondo">
                     <div class="media align-items-end profile-header">
-                        <div *ngFor="let foto of fotoPerfil" class="profile mr-3">
-                            <img [src]="fotoPerfil[0].sticker" alt="Imagen del Perfil" width="300"
-                                class="imagenPerfil rounded mb-2 img-thumbnail">
+                        <div class="profile mr-3">
+                            <img [src]="fotoPerfil[fotoPerfil.length - 1].sticker" width="300"  class="rounded mb-2 img-thumbnail">
                             <a href="#" class="btn btn-dark btn-sm btn-block">Editar Perfil</a>
 
 
@@ -24,7 +23,7 @@
                     <div class="imagenPerfilOpciones">
                         <input (change)="capturarImagen($event)" type="file" id="imgInput">
                         <button class="btn btn-success m-1" (click)="subirImagen()">Subir Imagen</button>
-                        <button class="btn btn-danger m-1" (click)="borrarImagen(fotoPerfil[0])">Eliminiar Imagen</button>
+                        <button class="btn btn-danger m-1" (click)="borrarImagen(fotoPerfil[fotoPerfil.length - 1])">Eliminiar Imagen</button>
                     </div>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">

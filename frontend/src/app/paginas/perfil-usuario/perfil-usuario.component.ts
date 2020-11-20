@@ -19,7 +19,7 @@ export class PerfilUsuarioComponent implements OnInit {
     this.imagenPerfil.obtenerImagenPerfil().subscribe(
       (res) => {
         this.fotoPerfil = res;
-        console.log(this.fotoPerfil);
+        // console.log(this.fotoPerfil);
       },
       (err) => {
         console.log(err);
@@ -31,10 +31,11 @@ export class PerfilUsuarioComponent implements OnInit {
 
   capturarImagen(event) {
     this.imagen = event.target.files[0];
-    console.log(event.target.files[0]);
+    // console.log(event.target.files[0]);
   }
 
   subirImagen() {
+    this.fotoPerfil.forEach(foto => console.log(foto));
     this.imagenPerfil.subirImagenPerfil(this.imagen).subscribe(
       (res) => {
         console.log('resp', res);
@@ -47,13 +48,14 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   borrarImagen(foto) {
-    console.log(foto)
-    console.log(this.fotoPerfil.indexOf(foto))
+    // console.log(foto)
+    // console.log(this.fotoPerfil.indexOf(foto))
     this.imagenPerfil.eliminarImagenPerfil(foto).subscribe(
       (res) => {
         const index = this.fotoPerfil.indexOf(foto);
         if (index > -1) {
           this.fotoPerfil.splice(index, 1);
+          window.location.reload();
         }
       },
       (err) => {
