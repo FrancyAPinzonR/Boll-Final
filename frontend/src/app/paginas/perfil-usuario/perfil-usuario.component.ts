@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagenperfilService } from '../../service/imagenperfil.service';
+import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,16 +11,29 @@ import { Router } from '@angular/router';
 export class PerfilUsuarioComponent implements OnInit {
   constructor(
     private imagenPerfil: ImagenperfilService,
-    private router: Router
+    private router: Router,
+    private auth: AuthService
   ) {}
-
-  fotoPerfil = [""];
+  
+  // Array para obtener la foto de perfil del usuario
+  fotoPerfil = [''];
+  // Array para obtener datos de usuario
+  datosPerfil: any = [];
 
   ngOnInit(): void {
     this.imagenPerfil.obtenerImagenPerfil().subscribe(
       (res) => {
         this.fotoPerfil = res;
         // console.log(this.fotoPerfil);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+    this.auth.obtenerDatosPerfil().subscribe(
+      (res) => {
+        this.datosPerfil = res;
+        console.log(this.datosPerfil);
       },
       (err) => {
         console.log(err);

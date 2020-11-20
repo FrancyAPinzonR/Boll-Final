@@ -5,7 +5,22 @@ const router = express.Router();
 const {
     RegistroUsuario
 } = require("../model/registroUsuario"); //
+const auth = require("../middleware/auth")
 // Ruta
+// Test para obtener datos de usuario
+router.get("/perfildatos", auth, async (req, res) => {
+    // Buscamos el usuario
+    const usuario = await RegistroUsuario.findById(req.usuario._id);
+    // Si no existe el usuario
+    if (!usuario) return res.status(400).send("El usuario no existe")
+    // Si el usuario existe
+    console.log(usuario)
+    const datosPerfil = await RegistroUsuario.findById({
+        _id: req.usuario._id,
+    })
+    res.send(datosPerfil)
+})
+
 router.post("/", async (req, res) => {
     let usuario = await RegistroUsuario.findOne({ //
         correo: req.body.correo,

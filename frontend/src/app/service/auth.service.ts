@@ -9,10 +9,17 @@ export class AuthService {
 
   private registroUrl = 'http://localhost:3000/api/usuario';
   private loginUrl = 'http://localhost:3000/api/auth';
+  // Test para obtener datos del usuario
+  private datosPerfilUrl = 'http://localhost:3000/api/usuario/perfildatos';
 
   constructor(private http: HttpClient, private router: Router) { }
 
   loginEstado = false;
+
+  // Funcion para hacer el test de obtener datos del usuario
+  obtenerDatosPerfil() {
+    return this.http.get<any>(this.datosPerfilUrl)
+  }
 
   registroUsuario(usuario) {
     return this.http.post<any>(this.registroUrl, usuario);
