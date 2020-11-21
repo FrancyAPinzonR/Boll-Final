@@ -21,7 +21,8 @@
 
                 <div class="bg-light p-4 d-flex justify-content-between text-center">
                     <div class="imagenPerfilOpciones">
-                        <input (change)="capturarImagen($event)" type="file" id="imgInput">
+                        <button class="btn btn-primary mr-3" (click) = "inputFile.click()">Escoge Foto Perfil</button>
+                        <input class="d-none" id="imgInput" (change)="capturarImagen($event)" type="file" #inputFile>
                         <button class="btn btn-success m-1" (click)="subirImagen()">Subir Imagen</button>
                         <button class="btn btn-danger m-1" (click)="borrarImagen(fotoPerfil[fotoPerfil.length - 1])">Eliminiar Imagen</button>
                     </div>
