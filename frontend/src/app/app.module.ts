@@ -29,6 +29,10 @@ import { NuestrosserviciosComponent } from './paginas/servicios/nuestrosservicio
 import { CartasofertaComponent } from './paginas/ofertas/cartasoferta/cartasoferta.component';
 import { MarcastopComponent } from './paginas/marcas/marcastop/marcastop.component';
 import { FormcontactoComponent } from './paginas/contacto/formcontacto/formcontacto.component';
+import { InformacionPersonalComponent } from './paginas/perfil-usuario/informacion-personal/informacion-personal.component';
+import { HistoriaClinicaComponent } from './paginas/perfil-usuario/historia-clinica/historia-clinica.component';
+import { AmigoHumanoComponent } from './paginas/perfil-usuario/amigo-humano/amigo-humano.component';
+import { HobbiesComponent } from './paginas/perfil-usuario/hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +56,11 @@ import { FormcontactoComponent } from './paginas/contacto/formcontacto/formconta
     NuestrosserviciosComponent,
     CartasofertaComponent,
     MarcastopComponent,
-    FormcontactoComponent
+    FormcontactoComponent,
+    InformacionPersonalComponent,
+    HistoriaClinicaComponent,
+    AmigoHumanoComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,

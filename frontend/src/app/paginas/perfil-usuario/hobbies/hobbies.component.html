@@ -1,0 +1,59 @@
+<!-- <p>hobbies works!</p> -->
+<h4 class="font-italic mb-4">Hobbies</h4>
+<form *ngIf = "hobbiesForm == false">
+    <div class="form-group">
+        <select [(ngModel)] = "registrarHobbies.actividadFisica" name = "actividadFisica" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesFisicas">
+            <option hidden selected value="">Escoge una Actividad Física</option>
+            <option value="Correr libremente">Correr libremente</option>
+            <option value="Acompañar a mi dueño al trotar">Acompañar a mi dueño al trotar</option>
+            <option value="Recoger la pelota">Recoger la pelota</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select [(ngModel)] = "registrarHobbies.actividadRutina" name="actividadRutina" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesRutinas">
+            <option hidden selected value="">Escoge una Actividad Rutinaria</option>
+            <option value="Comer en mi plato">Comer en mi plato</option>
+            <option value="Ladrar a desconocidos">Ladrar a desconocidos</option>
+            <option value="Buscar activamente a mi dueño">Buscar activamente a mi dueño</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select [(ngModel)] = "registrarHobbies.ocio" name="ocio" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="ocio">
+            <option hidden selected value="">Escoge una Actividad de Ocio</option>
+            <option value="Reposar en la cama">Reposar en la cama</option>
+            <option value="Ver televisión">Ver televisión</option>
+            <option value="Esconder huesos">Esconder huesos</option>
+        </select>
+    </div>
+    <button (click) = "submitDatosHobbies()" type="submit" class="btn btn-primary">Listo</button>
+</form>
+
+<p *ngIf = "hobbiesForm == true"> {{hobbiesLista[0].actividadFisica}} </p>
+
+<!-- <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+    adipisicing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+    enim
+    ad
+    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+    ea
+    commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum
+    dolore
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+    sunt
+    in
+    culpa
+    qui officia deserunt mollit anim id est laborum.</p> -->
+
+<!-- <div *ngIf='datosPerfil[0] = ""' style="width: 100%;" class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control .form-control-lg" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div> -->

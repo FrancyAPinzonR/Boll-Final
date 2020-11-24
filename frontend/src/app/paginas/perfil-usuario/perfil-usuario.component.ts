@@ -52,7 +52,7 @@ export class PerfilUsuarioComponent implements OnInit {
     // this.fotoPerfil.forEach(foto => console.log(foto));
     this.imagenPerfil.subirImagenPerfil(this.imagen).subscribe(
       (res) => {
-        console.log('resp', res);
+        // console.log('resp', res);
         window.location.reload();
       },
       (err) => {

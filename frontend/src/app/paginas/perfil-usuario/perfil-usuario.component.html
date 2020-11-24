@@ -1,11 +1,12 @@
 <section class=" py-5 header">
     <div class="container py-4">
         <div class="row py-5 px-4">
-            <div class="bg-white shadow rounded overflow-hidden">
+            <div style="width: 100%;" class="bg-white shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 fondo">
                     <div class="media align-items-end profile-header">
-                        <div *ngIf = 'fotoPerfil'  class="profile mr-3">
-                            <img [src]="fotoPerfil[fotoPerfil.length - 1].sticker" width="300"  class="rounded mb-2 img-thumbnail">
+                        <div *ngIf='fotoPerfil' class="profile mr-3">
+                            <img [src]="fotoPerfil[fotoPerfil.length - 1].sticker" width="300"
+                                class="rounded mb-2 img-thumbnail">
                             <a href="#" class="btn btn-dark btn-sm btn-block">Editar Perfil</a>
 
 
@@ -21,10 +22,11 @@
 
                 <div class="bg-light p-4 d-flex justify-content-between text-center">
                     <div class="imagenPerfilOpciones">
-                        <button class="btn btn-primary mr-3" (click) = "inputFile.click()">Escoge Foto Perfil</button>
+                        <button class="btn btn-primary mr-3" (click)="inputFile.click()">Escoge Foto Perfil</button>
                         <input class="d-none" id="imgInput" (change)="capturarImagen($event)" type="file" #inputFile>
                         <button class="btn btn-success m-1" (click)="subirImagen()">Subir Imagen</button>
-                        <button class="btn btn-danger m-1" (click)="borrarImagen(fotoPerfil[fotoPerfil.length - 1])">Eliminiar Imagen</button>
+                        <button class="btn btn-danger m-1"
+                            (click)="borrarImagen(fotoPerfil[fotoPerfil.length - 1])">Eliminiar Imagen</button>
                     </div>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
@@ -74,88 +76,25 @@
                     <div class="col-md-9 pr-4">
 
                         <div class="tab-content" id="v-pills-tabContent">
+
                             <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home"
                                 role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                <h4 class="font-italic mb-4">Información Personal</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim
-                                    ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore
-                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt
-                                    in
-                                    culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
+                                <app-informacion-personal></app-informacion-personal>
                             </div>
 
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
-                                aria-labelledby="v-pills-profile-tab">
-                                <h4 class="font-italic mb-4">Historia Clinica</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim
-                                    ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore
-                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt
-                                    in
-                                    culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile"
+                                role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <app-historia-clinica></app-historia-clinica>
                             </div>
 
                             <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-messages" role="tabpanel"
-                                aria-labelledby="v-pills-messages-tab">
-                                <h4 class="font-italic mb-4">Amigo Humano</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim
-                                    ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore
-                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt
-                                    in
-                                    culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
+                                aria-labelledby="v-pills-profile-tab">
+                                <app-amigo-humano></app-amigo-humano>
                             </div>
 
                             <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-settings" role="tabpanel"
-                                aria-labelledby="v-pills-settings-tab">
-                                <h4 class="font-italic mb-4">Hobbies</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim
-                                    ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore
-                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt
-                                    in
-                                    culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
+                                aria-labelledby="v-pills-profile-tab">
+                                <app-hobbies></app-hobbies>
                             </div>
                         </div>
                     </div>
