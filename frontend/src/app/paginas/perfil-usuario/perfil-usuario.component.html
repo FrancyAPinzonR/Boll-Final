@@ -22,7 +22,7 @@
 
                 <div class="bg-light p-4 d-flex justify-content-between text-center">
                     <div class="imagenPerfilOpciones">
-                        <button class="btn btn-primary mr-3" (click)="inputFile.click()">Escoge Foto Perfil</button>
+                        <button class="btn btn-info mr-3" (click)="inputFile.click()">Escoge Foto Perfil</button>
                         <input class="d-none" id="imgInput" (change)="capturarImagen($event)" type="file" #inputFile>
                         <button class="btn btn-success m-1" (click)="subirImagen()">Subir Imagen</button>
                         <button class="btn btn-danger m-1"
@@ -46,8 +46,14 @@
                         <!-- Tabs nav -->
                         <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
                             aria-orientation="vertical">
-                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill"
-                                href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+
+                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-history-tab" data-toggle="pill"
+                                href="#v-pills-history" role="tab" aria-controls="v-pills-history" aria-selected="true">
+                                <i class="fas fa-history mr-2"></i>
+                                <span class="font-weight-bold small text-uppercase">Historias</span></a>
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-home-tab" data-toggle="pill"
+                                href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">
                                 <i class="fa fa-user-circle-o mr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">Información
                                     Personal</span></a>
@@ -77,13 +83,18 @@
 
                         <div class="tab-content" id="v-pills-tabContent">
 
-                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home"
+                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-history" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
+                                <app-historias></app-historias>
+                            </div>
+
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-home"
                                 role="tabpanel" aria-labelledby="v-pills-home-tab">
                                 <app-informacion-personal></app-informacion-personal>
                             </div>
 
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile"
-                                role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
                                 <app-historia-clinica></app-historia-clinica>
                             </div>
 

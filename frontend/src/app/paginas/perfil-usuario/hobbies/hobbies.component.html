@@ -27,14 +27,13 @@
             <option value="Esconder huesos">Esconder huesos</option>
         </select>
     </div>
-    <button (click)="submitDatosHobbies()" type="submit" class="btn btn-primary">Listo</button>
+    <button (click)="submitDatosHobbies()" type="submit" class="btn btn-info">Listo</button>
 </form>
 
 <div class="d-flex flex-column" *ngIf="hobbiesForm == true">
     <div class="d-flex justify-content-between">
         <h4 class="font-italic mb-4">Hobbies</h4>
         <i class="icono fas fa-trash-alt" data-tooltip="Eliminar Hobbies" (click) = "eliminarDatosHobbies(hobbiesLista[0])" ></i>
-        <!-- <button class="btn btn-outline-danger btn-small">x</button> -->
     </div>
     <div class="card border-light mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
@@ -80,37 +79,3 @@
 
     
 </div>
-
-
-
-
-
-
-
-<!-- <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
-    adipisicing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-    enim
-    ad
-    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea
-    commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum
-    dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-    sunt
-    in
-    culpa
-    qui officia deserunt mollit anim id est laborum.</p> -->
-
-<!-- <div *ngIf='datosPerfil[0] = ""' style="width: 100%;" class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control .form-control-lg" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-</div> -->

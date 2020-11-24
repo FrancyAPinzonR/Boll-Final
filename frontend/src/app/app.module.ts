@@ -34,6 +34,7 @@ import { InformacionPersonalComponent } from './paginas/perfil-usuario/informaci
 import { HistoriaClinicaComponent } from './paginas/perfil-usuario/historia-clinica/historia-clinica.component';
 import { AmigoHumanoComponent } from './paginas/perfil-usuario/amigo-humano/amigo-humano.component';
 import { HobbiesComponent } from './paginas/perfil-usuario/hobbies/hobbies.component';
+import { HistoriasComponent } from './paginas/perfil-usuario/historias/historias.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { HobbiesComponent } from './paginas/perfil-usuario/hobbies/hobbies.compo
     InformacionPersonalComponent,
     HistoriaClinicaComponent,
     AmigoHumanoComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    HistoriasComponent
   ],
   imports: [
     BrowserModule,
