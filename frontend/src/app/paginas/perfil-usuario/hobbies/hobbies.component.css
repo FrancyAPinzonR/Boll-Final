@@ -1,0 +1,45 @@
+.fa-running {
+    color: white;
+}
+
+.fa-calendar-day {
+    color: white;
+}
+
+.fa-tv {
+    color: white;
+}
+
+.fa-trash-alt {
+    color: rgb(245, 50, 50);
+}
+
+/* tooltip */
+.icono {
+    position: relative;
+}
+
+.icono:hover {
+    cursor: pointer;
+}
+
+.icono::after {
+    --scale: 0;
+    left: 50%;
+    position: absolute;
+    content: attr(data-tooltip);
+    font-family: 'Poppins',
+    sans-serif;
+    font-size: small;
+    color: rgb(255, 92, 92);
+    border: 1px solid rgb(255, 92, 92);
+    border-radius: .3rem;
+    padding: .5rem;
+    z-index: 1;
+    transform: translateX(-50%) translateY(60%) scale(var(--scale));
+}
+
+.icono:hover::after{
+    transition: 150ms;
+    --scale: 1;
+}

@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './service/auth.service';
 import { ImagenperfilService } from './service/imagenperfil.service';
+import { HobbiesserviceService } from './service/perfil-usuario-service/hobbiesservice.service' ;
 import { FooterComponent } from './componentes/footer/footer.component';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
@@ -69,7 +70,7 @@ import { HobbiesComponent } from './paginas/perfil-usuario/hobbies/hobbies.compo
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService, ImagenperfilService, AuthGuard, {
+  providers: [AuthService, ImagenperfilService, HobbiesserviceService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true,

@@ -17,4 +17,10 @@ export class HobbiesserviceService {
   registroHobbies(hobbies) {
     return this.http.post<any>(this.cargarHobbies, hobbies);
   }
+
+  eliminarHobbies(hobbies) {
+    const _id = hobbies._id;
+    const url = `${this.mostrarHobbies}/${_id}`;
+    return this.http.delete<any>(url);
+  }
 }

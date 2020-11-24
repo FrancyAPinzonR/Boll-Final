@@ -1,16 +1,17 @@
-<!-- <p>hobbies works!</p> -->
-<h4 class="font-italic mb-4">Hobbies</h4>
-<form *ngIf = "hobbiesForm == false">
+<form *ngIf="hobbiesForm == false">
+    <h4 class="font-italic mb-4">Hobbies</h4>
     <div class="form-group">
-        <select [(ngModel)] = "registrarHobbies.actividadFisica" name = "actividadFisica" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesFisicas">
+        <select [(ngModel)]="registrarHobbies.actividadFisica" name="actividadFisica"
+            [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesFisicas">
             <option hidden selected value="">Escoge una Actividad Física</option>
             <option value="Correr libremente">Correr libremente</option>
-            <option value="Acompañar a mi dueño al trotar">Acompañar a mi dueño al trotar</option>
+            <option value="Acompañar a mi dueño a trotar">Acompañar a mi dueño a trotar</option>
             <option value="Recoger la pelota">Recoger la pelota</option>
         </select>
     </div>
     <div class="form-group">
-        <select [(ngModel)] = "registrarHobbies.actividadRutina" name="actividadRutina" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesRutinas">
+        <select [(ngModel)]="registrarHobbies.actividadRutina" name="actividadRutina"
+            [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="actividadesRutinas">
             <option hidden selected value="">Escoge una Actividad Rutinaria</option>
             <option value="Comer en mi plato">Comer en mi plato</option>
             <option value="Ladrar a desconocidos">Ladrar a desconocidos</option>
@@ -18,17 +19,73 @@
         </select>
     </div>
     <div class="form-group">
-        <select [(ngModel)] = "registrarHobbies.ocio" name="ocio" [ngModelOptions]="{standalone: true}" class="form-control .form-control-lg" id="ocio">
+        <select [(ngModel)]="registrarHobbies.ocio" name="ocio" [ngModelOptions]="{standalone: true}"
+            class="form-control .form-control-lg" id="ocio">
             <option hidden selected value="">Escoge una Actividad de Ocio</option>
             <option value="Reposar en la cama">Reposar en la cama</option>
             <option value="Ver televisión">Ver televisión</option>
             <option value="Esconder huesos">Esconder huesos</option>
         </select>
     </div>
-    <button (click) = "submitDatosHobbies()" type="submit" class="btn btn-primary">Listo</button>
+    <button (click)="submitDatosHobbies()" type="submit" class="btn btn-primary">Listo</button>
 </form>
 
-<p *ngIf = "hobbiesForm == true"> {{hobbiesLista[0].actividadFisica}} </p>
+<div class="d-flex flex-column" *ngIf="hobbiesForm == true">
+    <div class="d-flex justify-content-between">
+        <h4 class="font-italic mb-4">Hobbies</h4>
+        <i class="icono fas fa-trash-alt" data-tooltip="Eliminar Hobbies" (click) = "eliminarDatosHobbies(hobbiesLista[0])" ></i>
+        <!-- <button class="btn btn-outline-danger btn-small">x</button> -->
+    </div>
+    <div class="card border-light mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-info rounded-left">
+                <i class="fas fa-running fa-3x"></i>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Actividad Física</h5>
+                    <p class="card-text"> {{hobbiesLista[0].actividadFisica}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-light mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-info rounded-left">
+                <i class="fas fa-calendar-day fa-3x"></i>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Actividad Rutinaria</h5>
+                    <p class="card-text"> {{hobbiesLista[0].actividadRutina}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-light mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-info rounded-left">
+                <i class="fas fa-tv fa-3x"></i>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Actividad de Ocio</h5>
+                    <p class="card-text"> {{hobbiesLista[0].ocio}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+
+
+
 
 <!-- <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
     adipisicing
