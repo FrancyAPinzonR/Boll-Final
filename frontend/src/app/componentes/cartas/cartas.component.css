@@ -41,15 +41,15 @@
 }
 
 .categories .icon-box-cyan .icon i {
-  color: #12B0AF;
+  color: #12b0af;
 }
 
 .categories .icon-box-cyan:hover {
-  border-color: #12B0AF;
+  border-color: #12b0af;
 }
 
-.rounded-circle {
-    border-radius: 50%;
-    height: 180px;
-    width: 190px;
-}
+/* .rounded-circle {
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+} */
