@@ -13,11 +13,11 @@ h4 {
   color: #076335;
   background-color: #FFFFFF;
   background-clip: padding-box;
-  border: 1px solid #F25926;
+  /* border: 1px solid #F25926;
   padding: 8px 15px;
   margin-bottom: 10px;
   font-size: 14px;
-  width: 100%;
+  width: 100%; */
   outline: none;
 
 }

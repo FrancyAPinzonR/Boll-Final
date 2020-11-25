@@ -1,0 +1,105 @@
+<div class="conte-form">
+
+    <!-- Aquí inicia el formulario Contacto -->
+    <form action="./login.html">
+
+        <div class="general d-flex flex-column">
+            <div class="contenido col-sm-8">
+                <div class="registro col-sm-12">
+                    <h4>¡Asóciate con BOLL, para que obtengas clientes nuevos y puedas aumentar las ganancias de tu
+                        negocio!</h4>
+
+                </div>
+
+
+
+
+                <div class="form-row    col-md-12">
+                    <div class="campos col-sm-6">
+                        <input type="text" class="campos-texto" id="nombre" title="Escriba su nombre"
+                            placeholder="Nombre" minlength="10" maxlength="50" required>
+                    </div>
+
+                    <div class="campos col-sm-6">
+                        <input type="text" class="campos-texto" id="nombre" title="Escriba su apellido"
+                            placeholder="Apellido" minlength="10" maxlength="50" required>
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row  col-md-12">
+                    <div class="campos col-sm-6">
+                        <input type="tel" class="campos-texto" id="telefono" title="Escriba su numero de telefono"
+                            placeholder="Teléfono" minlength="7" maxlength="10" pattern="[0-9]{7,10}" required>
+                    </div>
+
+                    <div class="campos col-sm-6">
+                        <input type="email" class="campos-texto" title="Escriba su correo electronico" id="email"
+                            placeholder="anaphie@example.com" minlength="10" maxlength="30" required>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-row col-md-12">
+                    <div class="campos col-sm-12">
+                        <input type="text" class="campos-texto" id="establecimiento"
+                            title="Escriba El Nombre Del Establecimiento" placeholder="Nombre Del Establecimiento"
+                            minlength="10" maxlength="50" required>
+                    </div>
+                </div>
+
+
+                <div class="form-row  col-md-12">
+                    <div class="campos col-sm-6">
+                        <input type="text" class="campos-texto" id="direccion"
+                            title="Escriba la Dirección del Establecimiento" placeholder="Dirección Establecimiento"
+                            minlength="25" maxlength="50" required>
+                    </div>
+
+                    <div class="campos col-sm-6">
+                        <input type="text" class="campos-texto" title="Escriba la Ciudad" id="ciudad"
+                            placeholder="Ciudad" minlength="4" maxlength="30" required>
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-row col-md-12">
+                    <div class="campos col-sm-6">
+                        <select class="campos-texto" id="servicio" name="servicio" title="Categoria de Servicio"
+                            required>
+                            <option hidden selected value="">Categoria de Servicio</option>
+                            <option value="ciudadania">Comida</option>
+                            <option value="extrajeria">Peluqueria</option>
+                            <option value="pasaporte">Veterinario </option>
+
+                        </select>
+                    </div>
+
+                    <div class="campos col-sm-6">
+
+                        <input type="password" class="campos-texto" id="contraseña"
+                            title="Escriba su contraseña con un minino de 5 y maximo de 10 caracteres"
+                            placeholder="Contraseña" minlength="5" maxlength="10" pattern="[A-Za-z0-9!?-]{1-15}"
+                            required>
+                    </div>
+                </div>
+
+
+                <div class="boton">
+
+                    <input class="bton" type="submit" value="Enviar" />
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Aqui finaliza el formulario-->
+
+</div>

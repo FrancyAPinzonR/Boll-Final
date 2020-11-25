@@ -1,0 +1,13 @@
+.icono:hover {
+    cursor: pointer;
+}
+
+.imgperfil{
+    object-fit: cover;
+}
+
+.imgCarrusel {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+}

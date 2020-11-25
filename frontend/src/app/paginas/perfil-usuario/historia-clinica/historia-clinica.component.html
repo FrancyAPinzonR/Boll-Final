@@ -1,6 +1,97 @@
-<!-- <p>historia-clinica works!</p> -->
 <h4 class="font-italic mb-4">Historia Clinica</h4>
-<p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
+
+<div>
+
+    <table class="table table-borderless border rounded">
+        <thead class="bg-info text-white border border-info">
+            <tr>
+                <th scope="col">Datos de la Mascota</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paciente</td>
+                <td>Orso</td>
+            </tr>
+            <tr>
+                <td>Especie</td>
+                <td>Canino</td>
+            </tr>
+            <tr>
+                <td>Fecha de Nacimiento</td>
+                <td>05/04/2016</td>
+            </tr>
+            <tr>
+                <td>Sexo</td>
+                <td>Macho</td>
+            </tr>
+            <tr>
+                <td>Raza</td>
+                <td>Border Collie</td>
+            </tr>
+            <tr>
+                <td>Propietario</td>
+                <td>Laura</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="accordion border-bottom rounded" id="carnetvacunas">
+
+        <div class="card">
+            <div class="card-header bg-info" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left text-white font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapsevaccine" aria-expanded="true" aria-controls="collapsevaccine">
+                        Carnet de Vacunas
+                    </button>
+                </h2>
+            </div>
+        </div>
+
+        <div id="collapsevaccine" class="collapse  border border-bottom-0" aria-labelledby="headingOne"
+            data-parent="#carnetvacunas">
+            <div class="card-body">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Antiparasitario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/2017</td>
+                            <td>10kg</td>
+                            <td>Ivermectina</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur
     adipisicing
     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
     enim
@@ -15,4 +106,4 @@
     sunt
     in
     culpa
-    qui officia deserunt mollit anim id est laborum.</p>
+    qui officia deserunt mollit anim id est laborum.</p> -->

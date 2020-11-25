@@ -11,6 +11,10 @@ import { OfertasComponent } from './paginas/ofertas/ofertas.component';
 import { MarcasComponent } from './paginas/marcas/marcas.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { AuthGuard } from './guard/auth.guard';
+import { PerfilAdministradorComponent } from './paginas/perfil-administrador/perfil-administrador.component';
+import { PerfilProveedorComponent } from './paginas/perfil-proveedor/perfil-proveedor.component';
+import { RegistroProveedorComponent } from './paginas/registro-proveedor/registro-proveedor.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -27,9 +31,21 @@ const routes: Routes = [
     component: RegistroComponent,
   },
   {
+    path: 'RegistroProveedorComponent',
+    component: RegistroProveedorComponent,
+  },
+  {
     path: 'perfilusuario',
     component: PerfilUsuarioComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'perfiladministrador',
+    component: PerfilAdministradorComponent,
+  },
+  {
+    path: 'perfilproveedor',
+    component: PerfilProveedorComponent,
   },
   {
     path: 'nosotros',
