@@ -1,53 +1,50 @@
-
 <h4 class="font-italic mb-4">Amigo Humano</h4>
 
-<div style="width: 100%;" class="d-flex border rounded p-3">
-    <div style="width: 50%; height: 50%;" class="d-flex flex-column justify-content-center align-items-center">
-
-        <div style="width: 100%;" class="d-flex flex-column justify-content-center align-items-center">
-            <img class="rounded-circle imgperfil" style="width: 80%; height: 80%;" src="../../../../assets/imgs/imgServicios/comida.jpg" alt="">
+<div class="d-flex flex-column ">
+    <div class="d-flex flex-wrap" >
+        <div class="d-flex flex-column align-items-center" style="width: 100%;" >
+            <img class="imgperfil rounded-circle" src="../../../../assets/imgs/19492248_304.jpg" alt="">
             <h5 class="font-weight-bold m-2">José</h5>
+
+            <div>
+                <a data-toggle="collapse" href="#opcionImg"><i class="fas fa-chevron-down text-info"></i></a>
+            </div>
+
+            <div class=" btn-group-sm rounded collapse" role="group" id="opcionImg">
+                <input class="d-none" type="file" #inputImg>
+                <button type="button" class="btn btn-seconday btn-dark m-1" (click)="inputImg.click()">Escoger Imagen</button>
+                <button type="button" class="btn btn-seconday btn-dark m-1">Subir Imagen</button>
+                <button type="button" class="btn btn-seconday btn-dark m-1">Eliminar Imagen</button>
+            </div>
+
         </div>
-
-        <div class="d-flex justify-content-between" style="width: 50%;">
-            <input class="d-none" type="file" #inputImg>
-            <i class="far fa-image icono" (click)="inputImg.click()" title="Selecciona una imagen"></i>
-
-            <!-- <button class="d-none" #inputUpload></button> -->
-            <!-- (click) = "inputUpload.click()" -->
-            <i class="fas fa-upload icono" title="Subir Imagen"></i>
-
-            <!-- <button class="d-none" #inputErase></button> -->
-            <!-- (click) = "inputErase.click()" -->
-            <i class="fas fa-backspace icono" title="Elimina la Imagen"></i>
-        </div>
-
-    </div>
-
-    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 50%;">
-        <div style="width: 100%;">
+        <div class="m-2"  >
             <h5>Acerca de mi</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, similique nemo dignissimos.</p>
         </div>
-        <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" style="width: 100%;" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="imgCarrusel" src="../../../../assets/imgs/imgServicios/medicina.jpg" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img class="imgCarrusel" src="../../../../assets/imgs/imgRegistro/king.jpg" alt="">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div> -->
+    </div>
+    <div>
+        <table class="table table-borderless">
+            <thead class="bg-info text-white">
+                <tr>
+                    <th scope="col">Intereses</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Película Favorita</td>
+                    <td>Pulp Fiction</td>
+                </tr>
+                <tr>
+                    <td>Libro Favorito</td>
+                    <td>1984</td>
+                </tr>
+                <tr>
+                    <td>Comida Favorita</td>
+                    <td>Pasta</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-
-
