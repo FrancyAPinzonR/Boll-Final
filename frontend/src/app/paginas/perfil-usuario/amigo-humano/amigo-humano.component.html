@@ -3,7 +3,7 @@
 <div class="d-flex flex-column ">
     <div class="d-flex flex-wrap" >
         <div class="d-flex flex-column align-items-center" style="width: 100%;" >
-            <img class="imgperfil rounded-circle" src="../../../../assets/imgs/19492248_304.jpg" alt="">
+            <img *ngIf = 'fotoPerfilHumano != ""' class="imgperfil rounded-circle" [src] = "fotoPerfilHumano[fotoPerfilHumano.length - 1].sticker" >
             <h5 class="font-weight-bold m-2">José</h5>
 
             <div>
@@ -11,10 +11,10 @@
             </div>
 
             <div class=" btn-group-sm rounded collapse" role="group" id="opcionImg">
-                <input class="d-none" type="file" #inputImg>
+                <input class="d-none" type="file" (change) = "capturarImagenHumano($event)" #inputImg>
                 <button type="button" class="btn btn-seconday btn-dark m-1" (click)="inputImg.click()">Escoger Imagen</button>
-                <button type="button" class="btn btn-seconday btn-dark m-1">Subir Imagen</button>
-                <button type="button" class="btn btn-seconday btn-dark m-1">Eliminar Imagen</button>
+                <button type="button" class="btn btn-seconday btn-dark m-1" (click) = "subirImagenHumano()">Subir Imagen</button>
+                <button type="button" class="btn btn-seconday btn-dark m-1" (click) = "borrarImagenHumano(fotoPerfilHumano[fotoPerfilHumano.length - 1])">Eliminar Imagen</button>
             </div>
 
         </div>

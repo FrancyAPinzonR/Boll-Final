@@ -12,7 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './service/auth.service';
 import { ImagenperfilService } from './service/imagenperfil.service';
-import { HobbiesserviceService } from './service/perfil-usuario-service/hobbiesservice.service' ;
+import { HobbiesserviceService } from './service/perfil-usuario-service/hobbiesservice.service';
+import { ImagenamigohumanoService } from './service/perfil-usuario-service/imagenamigohumano.service';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
@@ -38,6 +39,7 @@ import { HistoriasComponent } from './paginas/perfil-usuario/historias/historias
 import { PerfilAdministradorComponent } from './paginas/perfil-administrador/perfil-administrador.component';
 import { PerfilProveedorComponent } from './paginas/perfil-proveedor/perfil-proveedor.component';
 import { RegistroProveedorComponent } from './paginas/registro-proveedor/registro-proveedor.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,7 @@ import { RegistroProveedorComponent } from './paginas/registro-proveedor/registr
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService, ImagenperfilService, HobbiesserviceService, AuthGuard, {
+  providers: [AuthService, ImagenperfilService, HobbiesserviceService, ImagenamigohumanoService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true,

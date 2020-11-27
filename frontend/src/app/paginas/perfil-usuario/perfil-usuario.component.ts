@@ -33,7 +33,7 @@ export class PerfilUsuarioComponent implements OnInit {
     this.auth.obtenerDatosPerfil().subscribe(
       (res) => {
         this.datosPerfil = res;
-        console.log(this.datosPerfil);
+        // console.log(this.datosPerfil);
       },
       (err) => {
         console.log(err);
